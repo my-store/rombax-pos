@@ -1,0 +1,7 @@
+node_modules
+databases/*/*.db
+build/img/admins/*
+!build/img/admins/admin-rombax.png
+build/img/admins_tmp
+build/img/products
+build/img/products_tmp

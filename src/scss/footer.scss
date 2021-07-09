@@ -1,0 +1,41 @@
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px 0px 10px;
+    height: 30px;
+    width: 100%;
+    background-image: linear-gradient(to left, rgb(30, 113, 116), rgb(53, 53, 53), rgb(53, 53, 53));
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+
+    // Admin
+    .footer-admin-container
+    {
+        display: flex;
+        align-items: center;
+    }
+    .footer-admin-logo
+    {
+        height: 20px;
+        width: 22px;
+        background-repeat: no-repeat;
+        background-size: 15px 15px;
+        background-position: left;
+        background-image: url("../icons/user.png");
+    }
+    .footer-admin {
+        font-size: 13px;
+        font-weight: bold;
+        color: white;
+    }
+
+    // Copyright
+    .footer-copyright {}
+    .footer-copyright p {
+        font-size: 13px;
+        font-weight: bold;
+        color: white;
+    }
+}

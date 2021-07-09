@@ -1,0 +1,113 @@
+.admin-photo-container {
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .admin-photo {
+        visibility: hidden;
+        opacity: 0;
+        height: 0px;
+        width: 0px;
+        animation-duration: 0.50s;
+        animation-iteration-count: inherit;
+        background-color: white;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 7px;
+        -webkit-box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.90);
+        -moz-box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.90);
+        box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.90);
+    }
+    .admin-photo-active {
+        animation-name: admin-photo-anim;
+        visibility: visible;
+        opacity: 1;
+        width: 400px;
+        height: 300px;
+    }
+    @keyframes admin-photo-anim {
+        0% {
+            visibility: visible;
+            opacity: 1;
+        }
+        40% {
+            width: 600px;
+            height: 500px;
+        }
+        100% {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    .cancel-admin-photo {
+        position: absolute;
+        transform: translate(175px, -125px);
+        height: 0px;
+        width: 0px;
+        background-color: rgb(30, 113, 116);
+        border-radius: 50%;
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 0;
+        background-repeat: no-repeat;
+        background-size: 10px 10px;
+        background-position: center;
+        background-image: url("../../icons/close-btn.png");
+    }
+    .cancel-admin-photo:hover {
+        background-color: rgb(42, 144, 148);
+    }
+    .cancel-admin-photo:active {
+        background-size: 12px 12px;
+    }
+    .cancel-admin-photo-active {
+        visibility: visible;
+        opacity: 1;
+        height: 33px;
+        width: 33px;
+    }
+
+    .admin-photo-info-container {
+        visibility: hidden;
+        opacity: 0;
+        height: 0px;
+        width: 350px;
+        background-color: white;
+        position: absolute;
+        left: 50%;
+        padding: 5px 10px 7px 10px;
+        transform: translate(-50%, 100px);
+        border: 1px solid rgb(199, 199, 199);
+        border-radius: 7px;
+
+        .admin-photo-info-head {
+            font-size: 14px;
+            padding-bottom: 3px;
+            color: rgb(44, 44, 44);
+        }
+        .admin-photo-info-detail {
+            font-size: 13px;
+            color: rgb(83, 83, 83);
+        }
+    }
+    .admin-photo-info-container-active {
+        visibility: visible;
+        opacity: 1;
+        height: unset;
+    }
+}
+.admin-photo-container-active {
+    visibility: visible;
+    opacity: 1;
+}

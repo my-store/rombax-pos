@@ -1,0 +1,88 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~ ROMBAX FAMILY BREBES JAWA TENGAH ~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~ Izzat Alharis | Rabu 07 Juli 2021 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+- Install React & ReactDOM
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. npm i --save react react-dom
+
+
+- Create /src/js/index.js and write :
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+import React from "react"
+import ReactDOM from "react-dom"
+ReactDOM.render(<h1>Rombax Family</h1>, document.getElementById("root"))
+
+
+- Install more dependencies
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. npm i --save-dev 
+   @babel/core 
+   @babel/preset-env 
+   @babel/preset-react 
+   css-loader 
+   style-loader 
+   sass-loader 
+   sass 
+   webpack 
+   webpack-cli 
+   babel-loader
+
+
+- Set babel-configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. create a file /webpack.common.js
+2. Goto : https://github.com/Jerga99/electron-react-boilerplate/blob/master/webpack.common.js
+3. Copy that script and paste into /webpack.common.js file
+
+
+- Link /build/js/app.js file into /pages/homepage.html file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<script src="../build/js/app.js"></script>
+
+
+- Create first component, let say /src/js/App.js and paste this into the file :
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+import React from "react"
+export default function App()
+{
+    return(
+        <h1>App Component</h1>
+    )
+}
+
+
+- Load App component in /src/js/index.js file (before render script) :
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+import App from "./App"
+
+
+- Create and load .scss (style) file :
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Create /src/scss/index.scss file
+2. Link into /src/js/index.js file (before render script) :
+import "../scss/index.scss"
+
+
+- Make development autoreload in every change
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. npm i --save-dev electron-reload
+2. Add this into /app.js file : 
+)-----------------------------------------------
+    in --save-dev is node_modules/.bin/electron)
+    in -g is /usr/local/bin/electron
+)-----------------------------------------------
+require("electron-reload")(__dirname, {
+    electron : "/usr/local/bin/electron"
+})
+
+
+- Create /preload.js file and call it from app.js :
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BrowserWindow({
+    webPreferences : {
+        preload : /preload.js
+    }
+})

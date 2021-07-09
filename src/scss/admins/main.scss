@@ -1,0 +1,217 @@
+
+.admin-page {
+    padding: 10px 20px 0px 15px;
+    width: 100%;
+
+    .page-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .page-title {
+            font-size: 20px;
+            padding-bottom: 5px;
+            color: rgb(30, 113, 116);
+            font-family: OpenSansBold;
+
+            span
+            {
+                font-size: 13px;
+                color: grey;
+            }
+            #total-admin
+            {
+                padding-right: 2px;
+            }
+        }
+
+        .page-menu {
+            display: flex;
+            align-items: center;
+
+            .page-menu-items {
+                cursor: pointer;
+                font-weight: bold;
+                padding-left: 10px;
+                font-size: 13.80px;
+            }
+            .page-menu-items:hover
+            {
+                opacity: 0.50;
+            }
+            .page-menu-items:active
+            {
+                color: rgb(0, 111, 145);
+            }
+        }
+    }
+
+    .table-container {
+        height: 545px;
+        min-height: 545px;
+        border-left: 1px solid #b9b9b9;
+        border-bottom: 1px solid #b9b9b9;
+        overflow-y: scroll;
+        border-radius: 0px 0px 0px 10px;
+
+        table {
+            padding: 3px;
+            padding-top: 35px;
+            width: 100%;
+
+            .table-head {
+                width: 967px;
+                position: absolute;
+                color: rgb(207, 207, 207);
+                transform: translate(-7px, -38px);
+                background-color: rgb(30, 113, 116);
+
+                th {
+                    border: none;
+                    padding: 5px;
+                    cursor: default;
+                    font-size: 15px;
+                }
+                .th-number 
+                {
+                    width: 50px;
+                }
+                .th-email
+                {
+                    width: 200px;
+                    text-align: left;
+                }
+                .th-fullname
+                {
+                    width: 320px;
+                    text-align: left;
+                }
+                .th-address
+                {
+                    text-align: left;
+                    width: 150px;
+                }
+                .th-phone
+                {
+                    text-align: left;
+                    width: 150px;
+                }
+                .th-photo
+                {
+                    width: 70px;
+                }
+            }
+            .admin-item-container {
+                width: 100%;
+
+                td {
+                    padding: 5px;
+                    border: 1px solid #7a7a7a;
+                    font-size: 14.50px;
+                }
+                .td-number 
+                {
+                    width: 47px;
+                }
+                .td-email
+                {
+                    width: 200px;
+                }
+                .td-fullname
+                {
+                    cursor: pointer;
+                    width: 320px;
+                }
+                .td-fullname:hover
+                {
+                    background-color: rgb(243, 243, 243);
+                }
+                .td-fullname:active
+                {
+                    color: white;
+                    background-color: rgb(30, 113, 116);
+                }
+                .td-address
+                {
+                    width: 150px;
+                }
+                .td-phone
+                {
+                    width: 150px;
+                }
+                .td-photo
+                {
+                    width: 70px;
+                }
+                .photo-link {
+                    cursor: pointer;
+                    display: block;
+                    text-align: center;
+                    color: rgb(0, 111, 145);
+                }
+                .photo-link:hover
+                {
+                    opacity: 0.50;
+                }
+                .photo-link:active
+                {
+                    font-size: 12px;
+                }
+                p {
+                    color: grey;
+                    font-size: 13px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+// Searchbox
+.search-admin-box {
+    visibility: hidden;
+    width: 335px;
+    position: fixed;
+    right: -300px;
+    top: 45px;
+    z-index: 5;
+    background: rgb(255, 255, 255);
+    -webkit-box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.70);
+    -moz-box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.70);
+    box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.70);
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.20s all ease;
+
+    input
+    {
+        height: 30px;
+        width: 100%;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid rgb(194, 194, 194);
+        padding: 0px 5px 0px 5px;
+    }
+    .search-admin-close {
+        position: absolute;
+        transform: translate(300px, -28px);
+        height: 22px;
+        width: 22px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-size: 8px 8px;
+        background-position: center;
+        background-color: rgb(30, 113, 116);
+        background-image: url("../../icons/close-btn.png");
+    }
+    .search-admin-close:active
+    {
+        background-size: 6px 6px;
+    }
+}
+.search-admin-box-active {
+    visibility: visible;
+    opacity: 1;
+    right: 20px;
+}

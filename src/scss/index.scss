@@ -1,0 +1,56 @@
+@font-face {
+    font-family: OpenSans;
+    src: url("../fonts/Open_Sans/OpenSans-Light.ttf") format("truetype");
+}
+@font-face {
+    font-family: OpenSansSemiBold;
+    src: url("../fonts/Open_Sans/OpenSans-SemiBold.ttf") format("truetype");
+}
+@font-face {
+    font-family: OpenSansBold;
+    src: url("../fonts/Open_Sans/OpenSans-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: OpenSansExtraBold;
+    src: url("../fonts/Open_Sans/OpenSans-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+    font-family: RolladeBallado;
+    src: url("../fonts/rollade_ballado/Rollade\ Ballado.ttf") format("truetype");
+}
+* {
+    font-family: OpenSans;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+h1,h2,h3,h4,h5,h6,p
+{
+    cursor: default;
+}

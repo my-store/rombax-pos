@@ -1,0 +1,111 @@
+.admin-action {
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .action-box-container {
+        border-radius: 7px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background: lightgrey;
+        animation-duration: 0.45s;
+        animation-iteration-count: inherit;
+        height: 0px;
+        width: 0px;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.90);
+        -moz-box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.90);
+        box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.90);
+
+        .action-photo {
+            height: 250px;
+            width: 100%;
+            background-color: #eee;
+            margin-bottom: 7px;
+            border-radius: 7px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .action-admin-name {
+            font-size: 15px;
+            text-align: center;
+        }
+        .action-admin-phone {
+            font-size: 14px;
+        }
+        .action-btns {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 20px 0px 0px 0px;
+
+            button {
+                width: 80px;
+                height: 28px;
+                outline: none;
+                cursor: pointer;
+                font-size: 13px;
+                margin: 2px;
+                border: none;
+                outline: none;
+                color: white;
+                font-weight: bold;
+                background-color: rgb(30, 113, 116);
+            }
+            button:hover
+            {
+                opacity: 0.90;
+            }
+            button:active
+            {
+                font-size: 12px;
+            }
+            .update-btn {
+                border-radius: 14px 0px 0px 14px;
+            }
+            .cancel-btn {
+                border-radius: 0px 14px 14px 0px;
+            }
+        }
+    }
+    .action-box-container-active {
+        animation-name: action-box-anim;
+        height: 380px;
+        width: 328px;
+        visibility: visible;
+        opacity: 1;
+    }
+    @keyframes action-box-anim 
+    {
+        0% {
+            height: 0px;
+            width: 0px;
+        }
+        50% {
+            height: 480px;
+            width: 428px;
+        }
+        100% {
+            height: 380px;
+            width: 328px;
+        }
+    }
+}
+.admin-action-active {
+    visibility: visible;
+    opacity: 1;
+}

@@ -1,0 +1,609 @@
+// Promary
+$primary-color : rgb(30, 113, 116);
+// Secondary
+$secondary-color : rgb(116, 30, 80);
+
+nav {
+    width: 100%;
+    height: 40px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(to left, rgb(30, 113, 116), rgb(53, 53, 53), rgb(53, 53, 53));
+    padding: 0px 0px 0px 10px;
+
+    // Navbar head
+    .nav-bar-head {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        // Logo
+        .nav-bar-head-logo {
+            height: 40px;
+            width: 40px;
+            background-repeat: no-repeat;
+            background-size: 25px 25px;
+            background-position: center;
+            margin-right: 2px;
+            background-image: url("../icons/nav-header-bg.png");
+        }
+        // Brand
+        .nav-bar-head-title {
+            font-family: RolladeBallado;
+            font-size: 20px;
+            line-height: 40px;
+            height: 40px;
+            min-height: 40px;
+            color: rgb(255, 255, 255);
+            width: 100%;
+        }
+    }
+
+    // Navbar menu
+    .nav-bar-menu-container {
+        display: flex;
+        align-items: center;
+        // Menu items
+        .nav-bar-menu-items {
+            cursor: pointer;
+            outline: none;
+            height: 27px;
+            line-height: 27px;
+            margin-left: 7px;
+            background: none;
+            display: block;
+            padding: 0px 10px 0px 0px;
+            border-bottom: 1px solid white;
+            color: white;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: left !important;
+        }
+        .nav-bar-menu-items:hover
+        {
+            color: rgb(241, 253, 129);
+            border-bottom: 1px solid rgb(241, 253, 129);
+        }
+    }
+    
+    // Frame buttons
+    .header-window-btns {
+        height: 40px;
+        min-height: 40px;
+        border-left: 2px solid rgb(233, 233, 233);
+        background-image: linear-gradient(to right, rgb(30, 113, 116), rgb(53, 53, 53));
+        border-radius: 20px 0px 0px 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        // Close, Reaload & Minimize button
+        .header-reload-btn,
+        .header-minimize-btn,
+        .header-close-btn
+        {
+            display: block;
+            height: 40px;
+            min-height: 40px;
+            width: 28px;
+            min-width: 28px;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+        }
+        .header-minimize-btn
+        {
+            background-size: 15px 15px;
+            background-image: url("../icons/minimize.png");
+        }
+        .header-minimize-btn:active
+        {
+            background-size: 13px 13px;
+        }
+        .header-reload-btn
+        {
+            background-size: 16px 16px;
+            background-image: url("../icons/reload.png");
+        }
+        .header-reload-btn:active
+        {
+            background-size: 14px 14px;
+        }
+        .header-close-btn
+        {
+            background-size: 14px 14px;
+            background-image: url("../icons/exit.png");
+        }
+        .header-close-btn:active
+        {
+            background-size: 12px 12px;
+        }
+        .header-minimize-btn:hover,
+        .header-reload-btn:hover,
+        .header-close-btn:hover
+        {
+            opacity: 0.70;
+        }
+    }
+}
+
+.hidden-menu {
+    width: 150px;
+    position: fixed;
+    top: 47px;
+    right: 500px;
+    background: rgb(255, 255, 255);
+    z-index: 5;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.20s all ease;
+    -webkit-box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.70);
+    -moz-box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.70);
+    box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.70);
+    border-radius: 5px;
+    padding: 5px 0px 5px 0px;
+
+    // Navbar menu items | Hidden/ Extra menu
+    p {
+        display: block;
+        width: 100%;
+        font-size: 14px;
+        cursor: pointer;
+        height: 30px;
+        line-height: 30px;
+        padding-left: 10px;
+    }
+    p:hover
+    {
+        opacity: 0.70;
+    }
+    p:active
+    {
+        font-size: 13px;
+    }
+}
+.hidden-menu-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+// Reset
+.reset-confirm {
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100%;
+    animation-duration: 0.50s;
+    animation-iteration-count: inherit;
+
+    // Reset confirm box
+    .reset-confirm-box {
+        height: 150px;
+        width: 250px;
+        background: white;
+        padding: 10px;
+        border-radius: 7px;
+
+        h1 {
+            font-size: 17px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        p {
+            font-size: 14px;
+        }
+        .reset-confirm-btns
+        {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding-top: 33px;
+        }
+        button
+        {
+            font-weight: bold;
+            font-size: 13px;
+            outline: none;
+            border: none;
+            height: 30px;
+            width: 100px;
+            background: none;
+            cursor: pointer;
+            border-bottom: 1px solid rgb(192, 192, 192);
+        }
+        button:hover
+        {
+            opacity: 0.70;
+        }
+        button:active
+        {
+            font-size: 12px;
+        }
+    }
+}
+.reset-confirm-active
+{
+    visibility: visible;
+    opacity: 1;
+    padding-top: 0%;
+    animation-name: form-anim;
+}
+@keyframes form-anim {
+    0% {
+        padding-top: 100%;
+    }
+    50% {
+        padding-top: 0%;
+        padding-bottom: 10%;
+    }
+    100% {
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
+}
+
+// Office update
+.office-update {
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100%;
+    animation-duration: 0.50s;
+    animation-iteration-count: inherit;
+
+    .office-update-form 
+    {
+        padding: 30px 10px 5px 10px;
+        background: rgb(255, 255, 255);
+        border-radius: 7px;
+        width: 320px;
+        -webkit-box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.90);
+        -moz-box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.90);
+        box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.90);
+    }
+    .office-update-form h1
+    {
+        left: 50%;
+        transform: translate(-50%, -48px);
+        padding: 0px 30px 0px 30px;
+        position: absolute;
+        height: 40px;
+        line-height: 38px;
+        border-radius: 20px;
+        background-color: rgb(30, 113, 116);
+        color: white;
+        font-size: 15px;
+        -webkit-box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.90);
+        -moz-box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.90);
+        box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.90);
+    }
+    .office-update-form label
+    {
+        font-size: 13px;
+        display: block;
+        padding: 0px 0px 5px 0px;
+        color: rgb(75, 75, 75);
+        font-weight: bold;
+    }
+    .office-update-form input
+    {
+        height: 35px;
+        width: 100%;
+        border: 1px solid rgb(199, 199, 199);
+        outline: none;
+        padding: 0px 7px 0px 7px;
+        margin-bottom: 5px;
+        border-radius: 4px;
+    }
+    .office-update-photo-container
+    {
+        width: 100%;
+    }
+    .office-update-photo-preview
+    {
+        height: 100px;
+        width: 100%;
+        background-size: 90px 90px;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: 5px;
+        background-color: rgb(238, 238, 238);
+    }
+    .office-update-photo-btn {
+        height: 30px;
+        cursor: pointer;
+        width: 100%;
+        font-weight: bold;
+        font-size: 13px;
+        outline: none;
+        border: none;
+        color: rgb(75, 75, 75);
+        border-radius: 4px;
+        background-color: rgb(238, 238, 238);
+    }
+    .office-update-photo-btn:active
+    {
+        font-size: 12px;
+    }
+    .office-update-form-btns
+    {
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between;
+    }
+    .office-update-form-btns button
+    {
+        width: 146px;
+        height: 28px;
+        outline: none;
+        cursor: pointer;
+        font-size: 13px;
+        margin: 2px;
+        border: none;
+        outline: none;
+        color: white;
+        font-weight: bold;
+        background-color: rgb(30, 113, 116);
+        margin-top: 7px;
+    }
+    .office-update-form-btns button:hover
+    {
+        opacity: 0.90;
+    }
+    .office-update-form-btns button:active
+    {
+        font-size: 12px;
+    }
+    .office-update-form-btns
+        button:nth-child(1)
+    {
+        border-radius: 14px 0px 0px 14px;
+    }
+    .office-update-form-btns
+        button:nth-child(2)
+    {
+        border-radius: 0px 14px 14px 0px;
+    }
+}
+.office-update-active {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 0%;
+    animation-name: form-anim;
+}
+@keyframes form-anim {
+    0% {
+        padding-top: 100%;
+    }
+    50% {
+        padding-top: 0%;
+        padding-bottom: 10%;
+    }
+    100% {
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
+}
+
+// Donation
+.donation-box-container
+{
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100%;
+    animation-duration: 0.50s;
+    animation-iteration-count: inherit;
+
+    // Donation box
+    .donation-box
+    {
+        height: 300px;
+        width: 300px;
+        background-color: white;
+        border-radius: 7px;
+        padding: 10px;
+
+        // Donation box title
+        .donation-box-title
+        {
+            font-size: 18px;
+            font-family: OpenSansBold;
+            letter-spacing: -0.50px;
+            color: rgb(30, 113, 116);
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgb(192, 192, 192);
+        }
+        .donation-box-text
+        {
+            font-size: 14px;
+            height: 220px;
+            width: 100%;
+            overflow-y: scroll;
+            padding-top: 7px;
+            padding-bottom: 10px;
+            color: rgb(48, 47, 47);
+        }
+        .donation-box-text span
+        {
+            display: block;
+            padding-bottom: 5px;
+        }
+        .donation-box-text span strong
+        {
+            font-size: 13.70px;
+        }
+        .donation-box-close-btn
+        {
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 13px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid rgb(192, 192, 192);
+            height: 35px;
+            width: 100%;
+            background: none;
+        }
+        .donation-box-close-btn:hover
+        {
+            opacity: 0.70;
+        }
+        .donation-box-close-btn:active
+        {
+            font-size: 12px;
+        }
+    }
+}
+.donation-box-container-active
+{
+    visibility: visible;
+    opacity: 1;
+    padding-top: 0%;
+    animation-name: nav-box-anim;
+}
+@keyframes nav-box-anim {
+    0% {
+        padding-top: 100%;
+    }
+    50% {
+        padding-top: 0%;
+        padding-bottom: 10%;
+    }
+    100% {
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
+}
+
+// About
+.about-box-container
+{
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100%;
+    animation-duration: 0.50s;
+    animation-iteration-count: inherit;
+
+    // About box
+    .about-box
+    {
+        height: 300px;
+        width: 300px;
+        background-color: white;
+        border-radius: 7px;
+        padding: 10px;
+
+        // About box title
+        .about-box-title
+        {
+            font-size: 18px;
+            font-family: OpenSansBold;
+            letter-spacing: -0.50px;
+            color: rgb(30, 113, 116);
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgb(192, 192, 192);
+        }
+        .about-box-text
+        {
+            font-size: 14px;
+            height: 220px;
+            width: 100%;
+            overflow-y: scroll;
+            padding-top: 7px;
+            padding-bottom: 10px;
+            color: rgb(48, 47, 47);
+        }
+        .about-box-text span
+        {
+            display: block;
+            padding-bottom: 5px;
+        }
+        .about-box-text span strong
+        {
+            font-size: 13.70px;
+        }
+        .about-box-close-btn
+        {
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 13px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid rgb(192, 192, 192);
+            height: 35px;
+            width: 100%;
+            background: none;
+        }
+        .about-box-close-btn:hover
+        {
+            opacity: 0.70;
+        }
+        .about-box-close-btn:active
+        {
+            font-size: 12px;
+        }
+    }
+}
+.about-box-container-active
+{
+    visibility: visible;
+    opacity: 1;
+    padding-top: 0%;
+    animation-name: nav-box-anim;
+}
+@keyframes nav-box-anim {
+    0% {
+        padding-top: 100%;
+    }
+    50% {
+        padding-top: 0%;
+        padding-bottom: 10%;
+    }
+    100% {
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
+}
