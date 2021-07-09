@@ -61,8 +61,7 @@ require("electron-reload")
 * If you install electron not in globally, the path is:
 \
 your-project-folder/node_modules/.bin/electron
-\
-\
+
 ### Creator
 * Izzat Alharis
 
